@@ -20,16 +20,18 @@ html {
 
 
 
-h1, h2, h3 {
+h1, h2, h3{
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
 }
 
-ul {
-    list-style: none;
+.nav__menu{
+    ul {
+        list-style: none;
+    }
 }
 
-a {
+a{
     text-decoration: none;
 }
 
@@ -147,4 +149,4 @@ button {
 /* For large devices */
 
 
-/* For 2K & 4K resolutions */
+/* For 2K & 4K resolutions */{}
