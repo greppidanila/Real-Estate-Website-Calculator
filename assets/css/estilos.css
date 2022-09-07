@@ -33,7 +33,7 @@
   --z-fixed: 100; }
 
 /* Responsive typography */
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   :root {
     --biggest-font-size: 4rem;
     --h1-font-size: 2.25rem;
@@ -88,6 +88,12 @@ button {
   margin-left: 1.5rem;
   margin-right: 1.5rem; }
 
+.grid {
+  display: grid; }
+
+.section {
+  padding: 4.5rem 0 2rem; }
+
 .section__title {
   font-size: var(--h2-font-size);
   margin-bottom: 1rem; }
@@ -104,5 +110,176 @@ button {
   /* For the animations ScrollReveal*/ }
 
 /*=============== HEADER & NAV ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: var(--z-fixed);
+  transition: 0.4s; }
+  .header .nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .header .nav .nav__logo {
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      column-gap: .25rem;
+      font-weight: var(--font-medium);
+      transition: .3s; }
+      .header .nav .nav__logo:hover {
+        color: var(--first-color); }
+      .header .nav .nav__logo i {
+        font-size: 1rem; }
+    .header .nav .nav__button {
+      display: none; }
+
+@media (max-width: 1023px) {
+  .nav__menu {
+    position: fixed;
+    bottom: 2rem;
+    background-color: var(--container-color);
+    box-shadow: 0 8px 24px rgba(39, 69, 190, 0.15);
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 1.30rem 3rem;
+    border-radius: 1.25rem;
+    transition: .4s; }
+    .nav__menu .nav__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .nav__menu .nav__list .nav__link {
+        color: var(--text-color);
+        display: flex;
+        padding: 0.5rem;
+        border-radius: 50%; }
+        .nav__menu .nav__list .nav__link i {
+          font-size: 1.25rem; }
+        .nav__menu .nav__list .nav__link span {
+          display: none; } }
+/* Change background header */
+.scroll-header {
+  background-color: var(--body-color);
+  box-shadow: 0 1px 4px rgba(37, 37, 40, 0.1); }
+  .scroll-header .nav__logo {
+    color: var(--first-color); }
+
+/* Active link */
+/*=============== HOME ===============*/
+.home {
+  background: linear-gradient(170deg, #383838 0%, #0f0f0f 30%);
+  padding-bottom: 0; }
+  .home .home__container {
+    padding-top: 4rem;
+    row-gap: 3.5rem; }
+    .home .home__container .home__title {
+      font-size: var(--biggest-font-size);
+      line-height: 120%;
+      margin-bottom: 1.25rem; }
+    .home .home__container .home__description {
+      color: var(--text-color-light);
+      margin-bottom: 2rem; }
+    .home .home__container .home__search {
+      background-color: var(--body-color);
+      padding: 0.35rem 0.35rem 0.35rem 0.75rem;
+      display: flex;
+      align-items: center;
+      border-radius: .75rem;
+      border: 3px solid var(--text-color-light);
+      margin-bottom: 2rem; }
+      .home .home__container .home__search i {
+        font-size: 1.25rem;
+        color: var(--first-color); }
+      .home .home__container .home__search .home__search-input {
+        width: 90%;
+        background-color: var(--body-color);
+        color: var(--text-color);
+        margin: 0 .5rem; }
+        .home .home__container .home__search .home__search-input::placeholder {
+          color: var(--text-color-light); }
+    .home .home__container .home__value {
+      display: flex;
+      column-gap: 2.5rem; }
+      .home .home__container .home__value .home__value-number {
+        font-size: var(--h1-font-size);
+        font-weight: var(--font-medium); }
+        .home .home__container .home__value .home__value-number span {
+          color: var(--second-color); }
+      .home .home__container .home__value .home__value-description {
+        display: flex;
+        color: var(--text-color-light);
+        font-size: var(--smaller-font-size); }
+    .home .home__container .home__images {
+      position: relative;
+      display: flex;
+      justify-content: center; }
+      .home .home__container .home__images .home__orbe {
+        width: 265px;
+        height: 284px;
+        background: linear-gradient(180deg, #292929 93%, #ababab 100%);
+        border-radius: 135px 135px 0 0; }
+      .home .home__container .home__images .home__img {
+        position: absolute;
+        width: 250px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 125px 125px 12px 12px;
+        display: inline-flex;
+        align-items: flex-end;
+        bottom: -1.5rem;
+        box-shadow: 0 16px 32px rgba(22, 39, 106, 0.25); }
+
+.home__title, .home__value-number {
+  color: #fff; }
+
+/*=============== BUTTON ===============*/
+.button {
+  display: inline-block;
+  background: linear-gradient(101deg, #3858d6, #2948c7);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 0.5rem;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  box-shadow: 0 4px 8px rgba(39, 69, 190, 0.25);
+  transition: .3s;
+  cursor: pointer; }
+  .button:hover {
+    box-shadow: 0 4px 12px rgba(39, 69, 190, 0.25); }
+
+/*=============== LOGOS ===============*/
+.logos__container {
+  padding-top: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 2rem;
+  justify-items: center; }
+  .logos__container .logos__img img {
+    height: 60px;
+    opacity: .3;
+    transition: .3s; }
+    .logos__container .logos__img img:hover {
+      opacity: .7; }
+
+/*=============== POPULAR ===============*/
+/* Swiper class */
+/*=============== VALUE ===============*/
+/*Rotate icon and add shadows*/
+/*=============== CONTACT ===============*/
+/*=============== SUBSCRIBE ===============*/
+/*=============== FOOTER ===============*/
+/*=============== SCROLL BAR ===============*/
+/*=============== SCROLL UP ===============*/
+/* Show Scroll Up*/
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+/* For medium devices */
+/* For large devices */
+/* For 2K & 4K resolutions */
 
 /*# sourceMappingURL=estilos.css.map */
