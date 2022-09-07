@@ -167,7 +167,7 @@ button {
 .scroll-header {
   background-color: var(--body-color);
   box-shadow: 0 1px 4px rgba(37, 37, 40, 0.1); }
-  .scroll-header .nav__logo {
+  .scroll-header #logo-principal {
     color: var(--first-color); }
 
 /* Active link */
@@ -261,10 +261,10 @@ button {
   justify-items: center; }
   .logos__container .logos__img img {
     height: 60px;
-    opacity: .3;
+    opacity: .5;
     transition: .3s; }
     .logos__container .logos__img img:hover {
-      opacity: .7; }
+      opacity: 1; }
 
 /*=============== POPULAR ===============*/
 /* Swiper class */

@@ -159,13 +159,15 @@ button{
 }
 
 /* Change background header */
-.scroll-header{
-    background-color: var(--body-color);
-    box-shadow: 0 1px 4px hsla(228, 4%, 15%, .1);
-    .nav__logo{
-        color: var(--first-color);
+
+    .scroll-header{
+        background-color: var(--body-color);
+        box-shadow: 0 1px 4px hsla(228, 4%, 15%, .1);
+        #logo-principal{
+            color: var(--first-color);
+        }
     }
-}
+
 
 
 /* Active link */
@@ -283,10 +285,10 @@ button{
     .logos__img{
         img{
             height: 60px;
-            opacity: .3;
+            opacity: .5;
             transition: .3s;
             &:hover{
-                opacity: .7;
+                opacity: 1;
             }
         }
     }
