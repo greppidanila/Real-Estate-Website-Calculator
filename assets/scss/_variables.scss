@@ -5,17 +5,21 @@
 
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
-    --first-color: hsl(228, 66%, 53%);
-    --first-color-alt: hsl(228, 66%, 47%);
-    --first-color-light: hsl(228, 62%, 59%);
+    --first-color: hsl(261, 66%, 53%);
+    --first-color-alt: hsl(261, 66%, 47%);
+    --first-color-light: hsl(261, 62%, 59%);
     --first-color-lighten: hsl(228, 100%, 97%);
-    --second-color: hsl(25, 83%, 53%);
-    --title-color: hsl(228, 57%, 28%);
-    --text-color: hsl(228, 15%, 50%);
-    --text-color-light: hsl(228, 12%, 75%);
+    --second-color: hsl(25, 83%, 47%);
+    --second-color-light: hsl(25, 80%, 59%);
+    --title-color: hsl(0, 0%, 32%);
+    --text-color: hsl(0, 0%, 53%);
+    --text-color-light: hsl(0, 0%, 82%);
     --border-color: hsl(228, 99%, 98%);
     --body-color: #fff;
     --container-color: #fff;
+    
+    --text-gradient: linear-gradient(120deg, var(--second-color), var(--second-color-light));
+    --bg-gradient: linear-gradient(120deg, var(--first-color), var(--first-color-light));
 
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
