@@ -4,10 +4,10 @@
   --header-height: 3.5rem;
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(261, 66%, 53%);
-  --first-color-alt: hsl(261, 66%, 47%);
-  --first-color-light: hsl(261, 62%, 59%);
-  --first-color-lighten: hsl(228, 100%, 97%);
+  --first-color: hsl(241, 66%, 53%);
+  --first-color-alt: hsl(241, 66%, 47%);
+  --first-color-light: hsl(241, 62%, 59%);
+  --first-color-lighten: hsl(0, 0%, 95%);
   --second-color: hsl(25, 83%, 47%);
   --second-color-light: hsl(25, 80%, 59%);
   --title-color: hsl(0, 0%, 32%);
@@ -465,6 +465,29 @@ span {
           color: #fff; }
 
 /*=============== SUBSCRIBE ===============*/
+.subscribe {
+  padding: 2.5rem 0; }
+  .subscribe .subscribe__container {
+    background-color: var(--first-color);
+    padding: 3rem 2rem;
+    border-radius: 1.25rem;
+    border: 6px solid var(--first-color-lighten);
+    text-align: center; }
+    .subscribe .subscribe__container .subscribe__title {
+      font-size: var(--h2-font-size);
+      color: #fff;
+      margin-bottom: 1rem; }
+    .subscribe .subscribe__container .subscribe__description {
+      color: var(--first-color-lighten);
+      font-size: var(--small-font-size);
+      margin-bottom: 2rem; }
+    .subscribe .subscribe__container .subscribe__button {
+      border: 2px solid #fff;
+      background: var(--first-color-light) !important;
+      font-size: var(--small-font-size); }
+      .subscribe .subscribe__container .subscribe__button:hover {
+        background: var(--first-color) !important; }
+
 /*=============== FOOTER ===============*/
 /*=============== SCROLL BAR ===============*/
 /*=============== SCROLL UP ===============*/
