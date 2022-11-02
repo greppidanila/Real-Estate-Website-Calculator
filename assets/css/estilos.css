@@ -45,6 +45,19 @@
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
     --smaller-font-size: .813rem; } }
+body.dark-theme {
+  --first-color: hsl(241, 66%, 53%);
+  --first-color-lighten: hsl(0, 0%, 0%);
+  --second-color: hsl(25, 83%, 47%);
+  --title-color: hsl(0, 0%, 71%);
+  --text-color: hsl(0, 0%, 72%);
+  --text-color-light: hsla(0, 0%, 96%, 0.212);
+  --border-color: hsl(0, 0%, 7%);
+  --body-color: rgb(0, 0, 0);
+  --container-color: rgb(15, 15, 15);
+  --text-gradient: linear-gradient(120deg, var(--second-color), var(--second-color-light));
+  --bg-gradient: linear-gradient(120deg, var(--first-color), var(--first-color-light)); }
+
 /*=============== BASE ===============*/
 * {
   box-sizing: border-box;
@@ -81,6 +94,14 @@ button {
   border: none; }
 
 /*=============== THEME ===============*/
+.change-theme {
+  font-size: 1.25rem;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s; }
+  .change-theme:hover {
+    color: var(--first-color); }
+
 /*========== Variables Dark theme ==========*/
 /*========== 
     Color changes in some parts of 
@@ -176,6 +197,8 @@ span {
   box-shadow: 0 1px 4px rgba(37, 37, 40, 0.1); }
   .scroll-header #logo-principal {
     color: var(--first-color); }
+  .scroll-header .change-theme {
+    color: var(--title-color); }
 
 /* Active link */
 .active-link {
@@ -569,7 +592,27 @@ span {
     background-color: #737373; }
 
 /*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -30%;
+  background-color: var(--container-color);
+  box-shadow: 0 8px 12px rgba(39, 69, 190, 0.1);
+  display: inline-flex;
+  padding: .35rem;
+  border-radius: .25rem;
+  color: var(--title-color);
+  font-size: 1.25rem;
+  z-index: var(--z-tooltip);
+  transition: .3s; }
+  .scrollup:hover {
+    transform: translateY(-0.25rem);
+    color: var(--first-color); }
+
 /* Show Scroll Up*/
+.show-scroll {
+  bottom: 8rem; }
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 /* For medium devices */

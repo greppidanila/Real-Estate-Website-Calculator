@@ -53,3 +53,19 @@
     --smaller-font-size: .813rem;
     }
 }
+
+// Variables Dark theme
+body.dark-theme{
+  --first-color: hsl(241, 66%, 53%);
+  --first-color-lighten: hsl(0, 0%, 0%);
+  --second-color: hsl(25, 83%, 47%);
+  --title-color: hsl(0, 0%, 71%);
+  --text-color: hsl(0, 0%, 72%);
+  --text-color-light: hsla(0, 0%, 96%, 0.212);
+  --border-color: hsl(0, 0%, 7%);
+  --body-color: rgb(0, 0, 0);
+  --container-color: rgb(15, 15, 15);
+  
+  --text-gradient: linear-gradient(120deg, var(--second-color), var(--second-color-light));
+  --bg-gradient: linear-gradient(120deg, var(--first-color), var(--first-color-light));
+}
