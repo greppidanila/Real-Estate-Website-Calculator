@@ -173,7 +173,11 @@ span{
 
 
 /* Active link */
-
+.active-link{
+    background: var(--bg-gradient);
+    color: #fff !important;
+    box-shadow: 0 4px 8px hsl(0, 0%, 22%);
+}
 
 /*=============== HOME ===============*/
 .home{
@@ -636,7 +640,18 @@ span{
 
 
 /*=============== SCROLL BAR ===============*/
-
+::-webkit-scrollbar{
+    width: .6rem;
+    border-radius: .5rem;
+    background-color: hsl(0, 0%, 67%);
+}
+::-webkit-scrollbar-thumb{
+    background-color: hsl(0, 0%, 53%);
+    border-radius: .5rem;
+    &:hover{
+        background-color: hsl(0, 0%, 45%);
+    }
+}
 
 /*=============== SCROLL UP ===============*/
 
