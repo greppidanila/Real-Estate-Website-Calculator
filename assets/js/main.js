@@ -52,8 +52,8 @@ const toggleItem = (item) =>{
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
     
-function scrollActive(){
-    const scrollY = window.pageYOffset
+const scrollActive = () =>{
+const scrollY = window.pageYOffset
 
 	sections.forEach(current =>{
 		const sectionHeight = current.offsetHeight,
@@ -62,18 +62,20 @@ function scrollActive(){
 			sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
 
 		if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-			document.querySelectorAll('.nav__menu a[href*=' + sectionID + ']').classList.add('active-link')
+			sectionsClass.classList.add('active-link')
 		}else{
-			document.querySelectorAll('.nav__menu a[href*=' + sectionID + ']').classList.remove('active-link')
+			sectionsClass.classList.remove('active-link')
 		}                                                    
 	})
 }
 window.addEventListener('scroll', scrollActive)
 
 /*=============== SHOW SCROLL UP ===============*/ 
-function scrollUp(){
-	const scrollUp = document.getElementById('scroll-up');
-	if(this.scrollY >= 350 ) scrollUp.classList.add('show-scroll');else scrollUp.classList.remove('show-scroll');
+const scrollUp = () =>{
+	const scrollUp = document.getElementById('scroll-up')
+    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
+	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+						: scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
 
