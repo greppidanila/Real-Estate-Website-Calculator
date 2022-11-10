@@ -217,7 +217,13 @@ span {
   padding-bottom: 0; }
   .home .home__container {
     padding-top: 4rem;
+    padding-bottom: 2rem;
     row-gap: 3.5rem; }
+    .home .home__container .input-section {
+      row-gap: 1rem;
+      padding-bottom: 1rem; }
+      .home .home__container .input-section .input-group-text {
+        font-weight: bold; }
     .home .home__container .home__title {
       font-size: var(--biggest-font-size);
       line-height: 120%;
@@ -239,7 +245,7 @@ span {
       .home .home__container .home__search .home__search-input {
         width: 90%;
         background-color: var(--body-color);
-        color: var(--text-color);
+        color: var(--title-color);
         margin: 0 .5rem; }
         .home .home__container .home__search .home__search-input::placeholder {
           color: var(--text-color-light); }
@@ -714,7 +720,7 @@ span {
         display: flex;
         column-gap: 3rem; }
         .header .nav .nav__menu .nav__list .nav__link span {
-          color: var(--border-color); }
+          color: white; }
         .header .nav .nav__menu .nav__list .nav__link i {
           display: none; }
     .header .nav .nav__button {
