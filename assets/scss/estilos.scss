@@ -603,7 +603,7 @@ span{
 /*=============== FOOTER ===============*/
 .footer__container{
     row-gap: 2.5em;
-    padding-left: 25px;
+    padding-left: 5px;
     .footer__logo{
         color: var(--first-color);
         font-size: var(--h3-font-size);
@@ -618,7 +618,7 @@ span{
     }
     .footer__content{
         grid-template-columns: repeat(2, max-content);
-        gap: 2.5rem 4rem;
+        gap: 2.5rem 3rem;
         .footer__title{
             font-size: var(--h3-font-size);
             margin-bottom: 1rem;
@@ -769,6 +769,7 @@ span{
     }
     
 } 
+
 @media screen and (min-width: 767px){
     .nav__menu{
         width: 342px;
@@ -803,6 +804,7 @@ span{
     }
 } 
 
+/* For large devices */
 @media screen and (min-width: 1023px){
     .section{
         padding: 7.5rem 0 1rem;
@@ -867,16 +869,143 @@ span{
                 .home__value{
                     column-gap: 3.5rem;
                 }
+            }
+            .home__images{
                 .home__orbe{
                     width: 504px;
                     height: 611px;
+                    border-radius: 256px 256px 0 0;
+                }
+                .home__img{
+                    width: 472px;
+                    height: 634px;
+                    border-radius: 236px 236px 12px 12px;
+                    bottom: -2.5rem;
                 }
             }
         }
     }
+    .logos__container {
+        .logos__img img{
+            height: 100px;
+        }
+    }
+    .popular__container{
+        padding-top: 3rem;
+        .popular__card{
+            width: 320px;
+            padding: .75rem .75rem 2rem;
+        }
+        .popular__data{
+            padding: 0 .25rem 0 .75rem;
+        }
+    }
+    .value__container, .contact__container{
+        align-items: flex-start;
+        column-gap: 5rem;
+        .value__images, .contact__images{
+            .value__orbe, .contact__orbe{
+                width: 501px;
+                height:  641px;
+                border-radius: 258px 258px 16px 16px;
+            }
+            .value__img, .contact__img{
+                width: 461px;
+                height:  601px;
+                border-radius: 238px 238px 12px 12px;
+                img{
+                    max-width: initial;
+                    width: 490px;
+                }
+            }
+        }
+        .value__content, .contact__content{
+            .value__data, .contact__data{
+                .value__description, .contact__description{
+                    font-size: var(--normal-font-size);
+                    margin-bottom: 2.5rem;
+                }
+                .value__accordion-title{
+                    font-size: var(--normal-font-size);
+                }
+            }
+            .value__accordion{
+                .value__accordion-item{
+                    padding: 1.25rem 1.25rem 1.25rem 1rem;
+                    .value__accordion-description{
+                        padding-bottom: 1rem;
+                        font-size: var(--small-font-size);
+                    }
+                }
+            }
+            .contact__card{
+                .contact__card-box{
+                    padding: 28px 1.5rem 1.5rem;
+                }
+            }
+        }
+    }
+    .subscribe__container{
+        padding: 4rem 10rem 4.5rem;
+        border-radius: 2rem;
+        border: 12px solid var(--first-color-light);
+        .subscribe__title{
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .subscribe__description{
+            font-size: var(--normal-font-size);
+            padding: 0 8rem;
+        }
+        .subscribe__button{
+            font-size: var(--normal-font-size);
+        }
+    }
+    .footer__container{
+        grid-template-columns: repeat(4, max-content);
+        justify-content: space-between;
+        .footer__description{
+            width: 65%;
+        }
+        .footer__content{
+            .footer__title{
+                margin-bottom: 1.5rem;
+            }
+            .footer__links{
+                row-gap: 1rem;
+            }
+        }
+    }
+    .footer__info{
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+    }
+    .show-scroll{
+        bottom: 3rem;
+        right: 3rem;
+    }
 }
 
-/* For large devices */
-
+@media screen and (min-width: 1040px){
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .home__container{
+        column-gap: 4rem;
+    }
+}
 
 /* For 2K & 4K resolutions */
+@media screen and (min-width: 2048px){
+    body{
+        zoom: 1.5;
+    }
+}
+
+@media screen and (min-width: 3840px){
+    body{
+        zoom: 2;
+    }
+}
