@@ -8,38 +8,37 @@ function simular_costo() {
         var precio_transaccion = document.getElementById("precio_transaccion").value;
         var precio_escritura = precio_transaccion;
     
-        var comision_comprador = document.getElementById("comision_comprador").value / 100;
-        
+        var comision_comprador = document.getElementById("comision_comprador").value / 100
+
     // comisiones finales
-        var iva_comprador = document.getElementById("iva_comprador");
-        
-        if (iva_comprador.checked == true) {
-          comision_comprador = comision_comprador * 1.21
-        } else {
-            comision_comprador = comision_comprador
-        } 
+    var iva_comprador = document.getElementById("iva_comprador");
     
+    if (iva_comprador.checked == true) {
+      comision_comprador = comision_comprador * 1.21
+    } else {
+        comision_comprador = comision_comprador
+    } 
+
     // impuesto de sellos
-        var primervivienda_comprador = document.getElementById("primervivienda_comprador");
-        var exencion_sellos = 6250000 / tipo_cambio_dolar
-    
-        if (primervivienda_comprador.checked == true) {
-            precio_escritura = precio_escritura - exencion_sellos
-        } else {
-            sellos = 0.018 //1,8% mitad de totalidad que es 3,6%
-        } 
-    
+    var primervivienda_comprador = document.getElementById("primervivienda_comprador");
+    var exencion_sellos = 6250000 / tipo_cambio_dolar
+
+    if (primervivienda_comprador.checked == true) {
+        precio_escritura = precio_escritura - exencion_sellos
+    } else {
+        sellos = 0.018 //1,8% mitad de totalidad que es 3,6%
+    } 
     
     // variable trámites
-        gastos_escrituracion = 0.012   //1,2% promedio de gastos
+        gastos_escrituracion = 0.012 ; //1,2% promedio de gastos
     
     
     // Generación de nuevas variables
-        monto_sellos = sellos * precio_escritura
-        monto_gastos_escrituracion = gastos_escrituracion * precio_transaccion
-        monto_comision_comprador = comision_comprador * precio_transaccion
-        total_costo_comprador = monto_sellos + monto_gastos_escrituracion + monto_comision_comprador
-        plata_final_comprador = -(-precio_transaccion - total_costo_comprador)
+        monto_sellos = sellos * precio_escritura;
+        monto_gastos_escrituracion = gastos_escrituracion * precio_transaccion;
+        monto_comision_comprador = comision_comprador * precio_transaccion;
+        total_costo_comprador = monto_sellos + monto_gastos_escrituracion + monto_comision_comprador;
+        plata_final_comprador = -(-precio_transaccion - total_costo_comprador);
     
     
     // Redondeo de números
@@ -57,21 +56,20 @@ function simular_costo() {
         
         plata_final_comprador = Math.round(plata_final_comprador * 100) / 100;
         plata_final_comprador = plata_final_comprador.toFixed(0);
-    
-    
-    
+            
+        
         //Resultados
         document.getElementById("analisis_oferta").style.display = "block";
         document.getElementById("analisis_imagen").style.display = "block";
         document.getElementById("plata_final_comprador").innerHTML = plata_final_comprador;
         document.getElementById("total_gastos").innerHTML = total_costo_comprador;
-    
+
         document.getElementById("sellos").innerHTML = monto_sellos;
         document.getElementById("gastos_escrituracion").innerHTML = monto_gastos_escrituracion;
         document.getElementById("monto_comision_comprador").innerHTML = monto_comision_comprador;
         
         //Cambiar texto en btn
-        document.getElementById("calcular_oferta").innerHTML = "Recalcular";        
+        document.getElementById("calcular_oferta").innerHTML = "Recalcular";    
     }
     
     
