@@ -190,6 +190,13 @@ span{
             }
         }
     }
+    .scroll-header{
+        .nav__container{
+            .nav__button .active-link{
+                    background-color: var(--first-color) !important;
+            }
+        }
+    }
 }
 
 /* Change background header */
@@ -209,7 +216,7 @@ span{
 
 /* Active link */
 .active-link{
-    background: var(--bg-gradient) !important;
+    background: var(--bg-gradient);
     color: #fff !important;
     box-shadow: 0 4px 8px hsl(0, 0%, 22%) !important;
 }
@@ -849,8 +856,9 @@ span{
     }
     .active-link{
         box-shadow: none !important;
-        background: none !important;
         font-weight: bold;
+        background: none !important;
+        color: #fff !important;
     }
     .change-theme{
         margin: 0 3rem;
@@ -909,7 +917,7 @@ span{
         }
     }
     .value__container, .contact__container{
-        align-items: flex-start;
+        align-items: center;
         column-gap: 5rem;
         .value__images, .contact__images{
             .value__orbe, .contact__orbe{

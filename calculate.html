@@ -37,19 +37,19 @@
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#popular" class="nav__link">
+                            <a href="./index.html" class="nav__link">
                                 <i class='bx bx-building-house' ></i>
                                 <span>Propiedades</span>
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#value" class="nav__link">
+                            <a href="./index.html" class="nav__link">
                                 <i class='bx bx-award' ></i>
                                 <span>Tasaciones</span>
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#contact" class="nav__link">
+                            <a href="#subscribe" class="nav__link">
                                 <i class='bx bx-phone' ></i>
                                 <span>Contacto</span>
                             </a>
@@ -60,7 +60,7 @@
                 <!-- Theme change button -->
                 <i class='bx bx-moon change-theme' id="theme-button"></i>
 
-                <a href="calculate.html" class="button nav__button active-link">
+                <a href="#" class="button nav__button">
                     Cotizá tus gastos
                 </a>
             </nav>
@@ -68,6 +68,7 @@
 
         <!--==================== MAIN ====================-->
         <main class="main">
+
             <!--==================== HOME BILLS CALCULATOR ====================-->
             <section class="home section" id="home">
                 <div class="home__container container">
@@ -76,8 +77,7 @@
                             ¿Cuáles son los gastos en la compra de una propiedad?
                         </h1>
                         <p class="home__description">
-                            * Este simulador sirve dar una referencia estimativa sobre cual sería el costo total a pagar 
-			luego de impuestos y gastos.
+                            * Este simulador sirve dar una referencia estimativa sobre cual sería el costo total a pagar luego de impuestos y gastos.
                         </p>
 
                         <form >
@@ -107,86 +107,24 @@
         
                             </div>
                         </form>
-                        <button type="button calculate-btn" class="button" id="calcular_oferta">Calcular</button>
+                        <button type="button" class="button" id="calcular_oferta"> 
+                            Calcular
+                        </button>
+                    </div>
                 </div>
             </section>
 
-            
-				<div class="resultado" id="analisis_oferta">
-					<h2>Según nuestra estimación, el monto total a abonar por la propiedad después de impuestos y gastos es de
-					USD <span id="plata_final_comprador">0.00</span>.</h2> 
-					<br>
-					<br>
-					<div class="bloque-resultados">
-						<div class="results"> 
-							<h5>Información relevante de gastos involucrados:</h5>
-							<p> El total de gastos involucrados en la operación es de: <strong>USD <span id="total_gastos">0.00</span></strong>.</p>
-							<ul>
-								<li class="list-bullets">Sellos: <strong>USD <span id="sellos">0.00</span></strong></li>
-								<li class="list-bullets">Gastos de escribano: <strong>USD <span id="gastos_escrituracion">0.00</span></strong></li>
-								<li class="list-bullets">Comisión inmobiliaria *: <strong>USD <span id="monto_comision_comprador">0.00</span></strong></li>					
-							</ul>
-							
-						</div>
-						<div class="photo-result">
-							<img class="photo-img" src="./img/search.png">
-						</div>
-					</div>
-					<br>
-						<br>
-						<p class="nota-al-pie">* 1) <span class="fw-bold">Honorarios de escribanía:</span> los honorarios del escribano los paga el comprador 2%  es el precio de referencia sobre el valor de escrituración, no obstante se deberá solicitar presupuesto al escribano para saberlo con exactitud.
-							<br>
-							2) <span class="fw-bold"> Impuesto de sellos:</span> este impuesto grava la operación con el 3.6% del monto de escrituración. La ley no especifica quien abona este importe, por usos y costumbres se divide el pago en partes iguales entre el comprador y el vendedor. Existe una exención cuando la propiedad que se adquiere sea para vivienda única, familiar y de ocupación permanente y que constituyan la única propiedad en cabeza de cada uno de los adquirentes. En este caso la base imponible se calculara sobre el excedente sobre $ 6.250.000
-							<br>
-							3)<span class="fw-bold"> Gastos de escribanía:</span> además de los honorarios antes mencionados, se deberá abonar gastos tales como inscripción en el registro dela propiedad, fichas registrales, sellos matriz y testimonios. Estos costos dependerán de cada operación ya que pertenecen a tablas movibles que poseen los escribanos. A modo orientativo se estima que estos gastos están alrededor del 0,60% al 1% del valor de escrituración.</p>
-				</div>
-				<div class="resultado" id="analisis_oferta">
-					<h2>Según nuestra estimación, el monto total a abonar por la propiedad después de impuestos y gastos es de
-					USD <span id="plata_final_comprador">0.00</span>.</h2> 
-					<br>
-					<br>
-					<div class="bloque-resultados">
-						<div class="results"> 
-							<h5>Información relevante de gastos involucrados:</h5>
-							<p> El total de gastos involucrados en la operación es de: <strong>USD <span id="total_gastos">0.00</span></strong>.</p>
-							<ul>
-								<li class="list-bullets">Sellos: <strong>USD <span id="sellos">0.00</span></strong></li>
-								<li class="list-bullets">Gastos de escribano: <strong>USD <span id="gastos_escrituracion">0.00</span></strong></li>
-								<li class="list-bullets">Comisión inmobiliaria *: <strong>USD <span id="monto_comision_comprador">0.00</span></strong></li>					
-							</ul>
-							
-						</div>
-						<div class="photo-result">
-							<img class="photo-img" src="./img/search.png">
-						</div>
-					</div>
-					<br>
-						<br>
-						<p class="nota-al-pie">* 1) <span class="fw-bold">Honorarios de escribanía:</span> los honorarios del escribano los paga el comprador 2%  es el precio de referencia sobre el valor de escrituración, no obstante se deberá solicitar presupuesto al escribano para saberlo con exactitud.
-							<br>
-							2) <span class="fw-bold"> Impuesto de sellos:</span> este impuesto grava la operación con el 3.6% del monto de escrituración. La ley no especifica quien abona este importe, por usos y costumbres se divide el pago en partes iguales entre el comprador y el vendedor. Existe una exención cuando la propiedad que se adquiere sea para vivienda única, familiar y de ocupación permanente y que constituyan la única propiedad en cabeza de cada uno de los adquirentes. En este caso la base imponible se calculara sobre el excedente sobre $ 6.250.000
-							<br>
-							3)<span class="fw-bold"> Gastos de escribanía:</span> además de los honorarios antes mencionados, se deberá abonar gastos tales como inscripción en el registro dela propiedad, fichas registrales, sellos matriz y testimonios. Estos costos dependerán de cada operación ya que pertenecen a tablas movibles que poseen los escribanos. A modo orientativo se estima que estos gastos están alrededor del 0,60% al 1% del valor de escrituración.</p>
-				</div>
-
-
-
-
-
-
-
-
-            <!--==================== VALUE ====================-->
+            <!--==================== VALUE RESULTS====================-->
             <section class="value section" id="value">
                 <div class="value__container container grid">
-                    <div class="value__images">
+                    <div class="value__images" id="analisis_imagen">
                         <div class="value__orbe"></div>
                         <div class="value__img">
                             <img src="assets/img/value.jpg" alt="">
                         </div>
                     </div>
-                    <div class="value__content">
-                        <div class="value__data resultado" id="analisis_oferta">
+                    <div class="value__content" id="analisis_oferta">
+                        <div class="value__data resultado" >
                                 <span class="section__subtitle">Según nuestra estimación,</span>
                                 <h2 class="section__title"> el monto total a abonar por la propiedad después de impuestos y gastos es de
                                     USD <span id="plata_final_comprador">0.00</span>.</h2> 
@@ -207,7 +145,7 @@
                                     </header>
                                     <div class="value__accordion-content">
                                         <p class="value__accordion-description nota-al-pie">
-                                            1) <span class="fw-bold">Honorarios de escribanía:</span> los honorarios del escribano los paga el comprador 2%  es el precio de referencia sobre el valor de escrituración, no obstante se deberá solicitar presupuesto al escribano para saberlo con exactitud.
+                                            <span class="fw-bold"> Impuesto de sellos:</span> este impuesto grava la operación con el 3.6% del monto de escrituración. La ley no especifica quien abona este importe, por usos y costumbres se divide el pago en partes iguales entre el comprador y el vendedor. Existe una exención cuando la propiedad que se adquiere sea para vivienda única, familiar y de ocupación permanente y que constituyan la única propiedad en cabeza de cada uno de los adquirentes. En este caso la base imponible se calculara sobre el excedente sobre $ 6.250.000
                                         </p>
                                     </div>
                             </div>
@@ -216,15 +154,17 @@
                                     <header class="value__accordion-header">
                                         <i class='bx bxs-crown value__accordion-icon'></i>                          
                                         <h3 class="value__accordion-title list-bullets">
-                                            Portales destacados y anunciantes premiere
+                                            Gastos de escribanía: <strong>USD <span id="gastos_escrituracion">0.00</span></strong>
                                         </h3>
                                         <div class="value__accordion-arrow">
                                             <i class='bx bxs-down-arrow' ></i>
                                         </div>
                                     </header>
                                     <div class="value__accordion-content">
-                                        <p class="value__accordion-description">
-                                            Invertimos en la máxima exposición en los portales más destacados del mercado. Más visibilidad, más posibles compradores.                                        </p>
+                                        <p class="value__accordion-description nota-al-pie">
+                                            <span class="fw-bold">Honorarios de escribanía:</span> los honorarios del escribano los paga el comprador 2%  es el precio de referencia sobre el valor de escrituración, no obstante se deberá solicitar presupuesto al escribano para saberlo con exactitud. <br> 
+                                            <span class="fw-bold"> Gastos de escribanía:</span> además de los honorarios antes mencionados, se deberá abonar gastos tales como inscripción en el registro dela propiedad, fichas registrales, sellos matriz y testimonios. Estos costos dependerán de cada operación ya que pertenecen a tablas movibles que poseen los escribanos. A modo orientativo se estima que estos gastos están alrededor del 0,60% al 1% del valor de escrituración.
+                                        </p>
                                     </div>
                             </div>
 
@@ -232,15 +172,15 @@
                                     <header class="value__accordion-header">
                                         <i class='bx bxs-bar-chart-square value__accordion-icon' ></i>
                                         <h3 class="value__accordion-title list-bullets">
-                                            Best prices on the market
+                                            Comisión inmobiliaria: <strong>USD <span id="monto_comision_comprador">0.00</span></strong>
                                         </h3>
                                         <div class="value__accordion-arrow">
                                             <i class='bx bxs-down-arrow' ></i>
                                         </div>
                                     </header>
                                     <div class="value__accordion-content">
-                                        <p class="value__accordion-description">
-                                            Nuestro precio es el mejor para vos, te garantizamos que tendrá cambios aunque pudieran aparecer costos adicionales e inesperados. 
+                                        <p class="value__accordion-description nota-al-pie">
+                                            <span class="fw-bold"> Honorarios inmobiliarios:</span> Corresponde a los honorarios de la inmobiliaria o corredores inmobiliarios involucrados en el proceso por las operaciones realizadas del inmueble: tasación, búsqueda de compra, publicidad, visitas e informes de dominio e inhibición si estuvieran a su cargo. Implica un 4% + IVA para el comprador y entre el 1% y 2% + IVA para el vendedor sobre el precio de venta.
                                         </p>
                                     </div>
                             </div>                       
@@ -250,17 +190,17 @@
             </section>
 
 
-            <!--==================== SUBSCRIBE ====================-->
-            <section class="subscribe section">
+            <!--==================== CONTACT ====================-->
+            <section class="subscribe section" id="subscribe">
                 <div class="subscribe__container container">
                     <h1 class="subscribe__title">
-                        Get started with Danila Real Estate
+                        ¿Aún tenes que vender tu propiedad?
                     </h1>
                     <p class="subscribe__description">
-                        Suscribe and find super attractive price quotes from us. Find your residense soon. 
+                        Hacemos realidad la venta de tu casa. No pierdas tiempo y dejá todo en manos de un profesional.
                     </p>
-                    <a href="#" class="button subscribe__button">
-                        Get Started
+                    <a href="https://api.whatsapp.com/send/?phone=5491132802019&text=Hola+Danila.&type=phone_number&app_absent=0" class="button subscribe__button" target="_blank">
+                        Comunicate ahora
                     </a>
                 </div>
             </section>
@@ -355,9 +295,6 @@
         <a href="#" class="scrollup" id="scroll-up">
             <i class='bx bxs-chevrons-up'></i>
         </a>
-
-        <!--=============== SCROLLREVEAL ===============-->
-        <script src="assets/js/scrollreveal.min.js"></script>
 
         <!--=============== SWIPER JS ===============-->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

@@ -195,7 +195,10 @@ span {
         .nav__menu .nav__list .nav__link i {
           font-size: 1.25rem; }
         .nav__menu .nav__list .nav__link span {
-          display: none !important; } }
+          display: none !important; }
+
+  .scroll-header .nav__container .nav__button .active-link {
+    background-color: var(--first-color) !important; } }
 /* Change background header */
 .scroll-header {
   background-color: var(--body-color);
@@ -207,7 +210,7 @@ span {
 
 /* Active link */
 .active-link {
-  background: var(--bg-gradient) !important;
+  background: var(--bg-gradient);
   color: #fff !important;
   box-shadow: 0 4px 8px #383838 !important; }
 
@@ -728,8 +731,9 @@ span {
 
   .active-link {
     box-shadow: none !important;
+    font-weight: bold;
     background: none !important;
-    font-weight: bold; }
+    color: #fff !important; }
 
   .change-theme {
     margin: 0 3rem;
@@ -773,7 +777,7 @@ span {
       padding: 0 .25rem 0 .75rem; }
 
   .value__container, .contact__container {
-    align-items: flex-start;
+    align-items: center;
     column-gap: 5rem; }
     .value__container .value__images .value__orbe, .value__container .value__images .contact__orbe, .value__container .contact__images .value__orbe, .value__container .contact__images .contact__orbe, .contact__container .value__images .value__orbe, .contact__container .value__images .contact__orbe, .contact__container .contact__images .value__orbe, .contact__container .contact__images .contact__orbe {
       width: 501px;

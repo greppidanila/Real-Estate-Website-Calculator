@@ -8,7 +8,7 @@ function simular_costo() {
         var precio_transaccion = document.getElementById("precio_transaccion").value;
         var precio_escritura = precio_transaccion;
     
-        var comision_comprador = document.getElementById("comision_comprador").value / 100
+        var comision_comprador = document.getElementById("comision_comprador").value / 100;
         
     // comisiones finales
         var iva_comprador = document.getElementById("iva_comprador");
@@ -21,7 +21,7 @@ function simular_costo() {
     
     // impuesto de sellos
         var primervivienda_comprador = document.getElementById("primervivienda_comprador");
-        var exencion_sellos = 5000000 / tipo_cambio_dolar
+        var exencion_sellos = 6250000 / tipo_cambio_dolar
     
         if (primervivienda_comprador.checked == true) {
             precio_escritura = precio_escritura - exencion_sellos
@@ -30,15 +30,13 @@ function simular_costo() {
         } 
     
     
-    // variables trámites e impuestos
+    // variable trámites
         gastos_escrituracion = 0.012   //1,2% promedio de gastos
-        iti = 0.015  //1,5% si se adquirió inmueble previo al 1 de enero del 2018
     
     
     // Generación de nuevas variables
         monto_sellos = sellos * precio_escritura
         monto_gastos_escrituracion = gastos_escrituracion * precio_transaccion
-        monto_iti = iti * precio_transaccion
         monto_comision_comprador = comision_comprador * precio_transaccion
         total_costo_comprador = monto_sellos + monto_gastos_escrituracion + monto_comision_comprador
         plata_final_comprador = -(-precio_transaccion - total_costo_comprador)
@@ -64,6 +62,7 @@ function simular_costo() {
     
         //Resultados
         document.getElementById("analisis_oferta").style.display = "block";
+        document.getElementById("analisis_imagen").style.display = "block";
         document.getElementById("plata_final_comprador").innerHTML = plata_final_comprador;
         document.getElementById("total_gastos").innerHTML = total_costo_comprador;
     
@@ -72,22 +71,23 @@ function simular_costo() {
         document.getElementById("monto_comision_comprador").innerHTML = monto_comision_comprador;
         
         //Cambiar texto en btn
-        document.getElementById("calculate").innerHTML = "Recalcular";
-        
+        document.getElementById("calcular_oferta").innerHTML = "Recalcular";        
     }
     
     
-    //Esconder el analisis de gastos cuando no hayan datos cargados.
+    //Esconder el analisis de gastos e imagen cuando no hayan datos cargados.
     document.getElementById("analisis_oferta").style.display = "none";
+    document.getElementById("analisis_imagen").style.display = "none";
     
-    //click para llamar funcion
+
+    //click para llamar funcion calcular
     document.getElementById("calcular_oferta").onclick = function() {
         simular_costo();
     };
     
     
     
-    // Siempre
+    // Activo siempre, input del 1 al 4%
     
     document.getElementById("comision_comprador").onchange = function() {
     
