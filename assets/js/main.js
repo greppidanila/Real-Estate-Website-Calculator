@@ -1,15 +1,17 @@
-/*=============== CHANGE BACKGROUND HEADER ===============*/
+/*=============== CAMBIO DE FONDO DE COLOR DEL HEADER ===============*/
 function scrollHeader() {
     const header = document.getElementById("header");
-    // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+    //Cuando el scroll es mayor que 50 de altura viewport, agregar la clase scroll-header a la etiqueta del header
     if (this.scrollY >= 50) header.classList.add("scroll-header");
     else header.classList.remove("scroll-header");
 }
 window.addEventListener("scroll", scrollHeader);
 
-/*=============== SWIPER POPULAR ===============*/
+
+
+/*=============== SWIPER EN LAS CARDS DE PROPIEDADES | Slider =============*/
     var swiperPopular = new Swiper(".popular__container", {
-        spaceBetween: 32,
+        spaceBetween: 30,
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
@@ -21,38 +23,42 @@ window.addEventListener("scroll", scrollHeader);
         },
     });
 
-/*=============== VALUE ACCORDION ===============*/
+
+
+/*=============== LISTA DESPLEGABLE | Accordion ===============*/
 const accordionItems = document.querySelectorAll('.value__accordion-item')
 
-accordionItems.forEach((item) =>{
-    const accordionHeader = item.querySelector('.value__accordion-header')
+accordionItems.forEach((elemento) =>{
+    const accordionHeader = elemento.querySelector('.value__accordion-header')
 
     accordionHeader.addEventListener('click', () =>{
-        const openItem = document.querySelector('.accordion-open')
+        const abrirElemento = document.querySelector('.accordion-open')
 
-        toggleItem(item)
+        alternarElemento(elemento)
 
-        if(openItem && openItem!== item){
-            toggleItem(openItem)
+        if(abrirElemento && abrirElemento!== elemento){
+            alternarElemento(abrirElemento)
         }
     })
 })
 
-const toggleItem = (item) =>{
-    const accordionContent = item.querySelector('.value__accordion-content')
+const alternarElemento = (elemento) =>{
+    const accordionContent = elemento.querySelector('.value__accordion-content')
 
-    if(item.classList.contains('accordion-open')){
+    if(elemento.classList.contains('accordion-open')){
         accordionContent.removeAttribute('style')
-        item.classList.remove('accordion-open')
+        elemento.classList.remove('accordion-open')
     }else{
         accordionContent.style.height = accordionContent.scrollHeight + 'px'
-    item.classList.add('accordion-open')
+    elemento.classList.add('accordion-open')
     }    
 }
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+
+
+/*=============== LINK ACTIVO EN NAV según sección vista ===============*/
 const sections = document.querySelectorAll('section[id]')
     
-const scrollActive = () =>{
+const scrollActivo = () =>{
 const scrollY = window.pageYOffset
 
 	sections.forEach(current =>{
@@ -68,46 +74,54 @@ const scrollY = window.pageYOffset
 		}                                                    
 	})
 }
-window.addEventListener('scroll', scrollActive)
+window.addEventListener('scroll', scrollActivo)
 
-/*=============== SHOW SCROLL UP ===============*/ 
+
+
+/*=============== MOSTRAR SCROLL UP ===============*/ 
 const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
-    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
+    // Cuando el SCROLL es superior a 350 de altura viewport, agregar la clase show-scroll a la etiqueta "a" con la clase scrollup
 	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
 						: scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
 
-/*=============== DARK LIGHT THEME ===============*/ 
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'bx-sun'
 
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun'
 
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-    themeButton.classList[selectedIcon === 'bx bx-moon' ? 'add' : 'remove'](iconTheme)
+
+/*=============== MODO DARK LIGHT ===============*/ 
+const temaBoton = document.getElementById('theme-button')
+const temaDark = 'dark-theme'
+const temaIcono = 'bx-sun'
+
+// Tema seleccionado previamente (si está seleccionado por el usuario)
+const temaSeleccionado = localStorage.getItem('tema-seleccionado')
+const iconoSeleccionado = localStorage.getItem('icono-seleccionado')
+
+// Obtenemos el tema actual que tiene la interfaz validando la clase dark-theme
+const obtenerTemaActual = () => document.body.classList.contains(temaDark) ? 'dark' : 'light'
+const obtenerIconoActual = () => temaBoton.classList.contains(temaIcono) ? 'bx bx-moon' : 'bx bx-sun'
+
+// Validamos si el usuario eligió previamente un tema
+if (temaSeleccionado) {
+  // Si se cumple la validación, preguntamos cuál fue el problema para saber si activamos o desactivamos dark-theme.
+    document.body.classList[temaSeleccionado === 'dark' ? 'add' : 'remove'](temaDark)
+    temaBoton.classList[iconoSeleccionado === 'bx bx-moon' ? 'add' : 'remove'](temaIcono)
 }
 
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
+// Activar/desactivar el tema manualmente con el botón
+temaBoton.addEventListener('click', () => {
+    // Agregar o eliminar el tema/icono oscuro
+    document.body.classList.toggle(temaDark)
+    temaBoton.classList.toggle(temaIcono)
+    // Guardamos el tema y el icono actual que eligió el usuario
+    localStorage.setItem('tema-seleccionado', obtenerTemaActual())
+    localStorage.setItem('icono-seleccionado', obtenerIconoActual())
 })
+
+
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
