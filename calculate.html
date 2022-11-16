@@ -16,20 +16,17 @@
         <!--=============== SWIPER CSS ===============-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
-        <!--=============== SWEET ALERT ===============-->
-        
-
         <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="assets/css/estilos.css">
+        <link rel="stylesheet" href="./assets/css/estilos.css">
 
-        <title>Simulá tus gastos</title>
+        <title>Simulá tus gastos - Compra de inmueble</title>
     </head>
     <body>
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
                 <a href="#" class="nav__logo" id="logo-principal">
-                    DG Real Estate <!--agregar logo img -->
+                    DG Real Estate 
                 </a>
                 <div class="nav__menu">
                     <ul class="nav__list">
@@ -60,7 +57,7 @@
                     </ul>
                 </div>
 
-                <!-- Theme change button -->
+                <!-- Icono para cambio de tema  -->
                 <i class='bx bx-moon change-theme' id="theme-button"></i>
 
                 <a href="#" class="button nav__button">
@@ -72,15 +69,15 @@
         <!--==================== MAIN ====================-->
         <main class="main">
 
-            <!--==================== HOME BILLS CALCULATOR ====================-->
+            <!--==================== HOME SIMULADOR DE GASTOS ====================-->
             <section class="home section" id="home">
                 <div class="home__container container">
                     <div class="home__data">
                         <h1 class="home__title">
-                            ¿Cuáles son los gastos en la compra de una propiedad?
+                            ¿Cuáles son los gastos en la <span>compra</span> de una propiedad?
                         </h1>
                         <p class="home__description" id="home_description">
-                            * Este simulador sirve dar una referencia estimativa sobre cual sería el costo total a pagar luego de impuestos y gastos. <br> A continuación, se presentan las cotizaciones del dólar oficial: 
+                            * Este simulador sirve dar una referencia estimativa sobre cual sería el costo total a pagar luego de impuestos y gastos. <br> A continuación, se presentan las cotizaciones del dólar oficial al día de hoy: 
                         </p>
 
                         <form >
@@ -94,7 +91,7 @@
                                 </div>
                                 
                                 <div class="checkbox-input">
-                                    <label class="form-range-label" for="comision_comprador">Comisión inmobiliaria pactada con el profesional: <span id="input_comision_comprador">1.0</span>% </label>
+                                    <label class="form-range-label" for="comision_comprador">Seleccioná la comisión inmobiliaria pactada con el profesional (del 0 al 4%): <span id="input_comision_comprador">1.0</span>% </label>
         
                                     <input type="range"  id="comision_comprador" name="comision_comprador" 
                                             min="0" max="4" value="1" step="0.5">
@@ -119,26 +116,23 @@
                 </div>
             </section>
 
-            <!--==================== VALUE RESULTS====================-->
-            <section class="value section" id="value">
+            <!--====================SECCIÓN RESULTADOS====================-->
+            <section class="value section" id="value bills-section">
                 <div class="value__container container grid">
                     <div class="value__images" id="analisis_imagen">
                         <div class="value__orbe"></div>
                         <div class="value__img">
-                            <img src="assets/img/value.jpg" alt="">
+                            <img src="./assets/img/value.jpg" alt="">
                         </div>
                     </div>
                     <div class="value__content" id="analisis_oferta">
                         <div class="value__data resultado" >
                                 <span class="section__subtitle">Según nuestra estimación,</span>
-                                <h2 class="section__title"> el monto total a abonar por la propiedad después de impuestos y gastos es de
+                                <h2 class="section__title">Incluyendo gastos e impuestos, el <span>monto total</span> a abonar por la <span>propiedad</span> será de
                                     USD <span id="plata_final_comprador">0.00</span>.</h2> 
-                                <p class="value__description">
-                                    No te pierdas la experiencia de tener un servicio personalizado y de excelencia.
-                                </p>
                         </div>
                         <div class="value__accordion results-container">
-                            <p> El total de gastos involucrados en la operación es de: <strong>USD <span id="total_gastos">0.00</span></strong>.</p>
+                            <p> El total de los gastos involucrados en la operación es de: <strong>USD <span id="total_gastos">0.00</span></strong>. Conocé más sobre ellos:</p>
                             <div class="value__accordion-item results">
 
                                     <header class="value__accordion-header">
@@ -218,11 +212,10 @@
             <div class="footer__container container grid">
                 <div>
                     <a href="#" class="footer__logo">
-                        Danila Real Estate <i class='bx bxs-home-alt-2'></i>
-                        
+                        Danila Real Estate <i class='bx bxs-home-alt-2'></i>                        
                     </a>
                     <p class="footer__description">
-                        Our vision is to make all people the best place to live for them.
+                        Propiedades exclusivas, asesoramiento personalizado.
                     </p>
                 </div>
                 <div class="footer__content">
@@ -232,10 +225,10 @@
                         </h3>
                         <ul class="footer__links">
                             <li>
-                                <a href="#" class="footer__link">About us</a>
+                                <a href="#" class="footer__link">Sobre nosotros</a>
                             </li>
                             <li>
-                                <a href="#" class="footer__link">Feautures</a>
+                                <a href="#" class="footer__link">Novedades</a>
                             </li>
                             <li>
                                 <a href="#" class="footer__link">News & Blog</a>
@@ -244,39 +237,39 @@
                     </div>
                     <div>
                         <h3 class="footer__title">
-                            Company
+                            Companía
                         </h3>
                         <ul class="footer__links">
                             <li>
-                                <a href="#" class="footer__link">How we work?</a>
+                                <a href="#" class="footer__link">¿Cómo trabajamos?</a>
                             </li>
                             <li>
-                                <a href="#" class="footer__link">Capital</a>
+                                <a href="#" class="footer__link">¿Dónde estamos?</a>
                             </li>
                             <li>
-                                <a href="#" class="footer__link">Security</a>
+                                <a href="#" class="footer__link">Securidad</a>
                             </li>
                         </ul>
                     </div>
                     <div>
                         <h3 class="footer__title">
-                            Support
+                            Ayuda
                         </h3>
                         <ul class="footer__links">
                             <li>
-                                <a href="#" class="footer__link">FAQs</a>
+                                <a href="#" class="footer__link">Preguntas Frecuentes</a>
                             </li>
                             <li>
-                                <a href="#" class="footer__link">Support center</a>
+                                <a href="#" class="footer__link">Atención personalizada</a>
                             </li>
                             <li>
-                                <a href="#" class="footer__link">Contact Us</a>
+                                <a href="#" class="footer__link">Contactanos</a>
                             </li>
                         </ul>
                     </div>
                     <div>
                         <h3 class="footer__title">
-                            Follow us
+                            Seguinos
                         </h3>
                         <ul class="footer__social">
                             <a href="https://www.instagram.com/danila.realestate/" target="_blank" class="footer__social-link"><i class='bx bxl-instagram-alt' ></i></a>
@@ -288,11 +281,11 @@
             </div>
             <div class="footer__info container">
                 <span class="footer__copy">
-                    Danila Real Estate. All rights reserved
+                    Danila Real Estate. Todos los derechos reservados.
                 </span>
                 <div class="footer__privacy">
-                    <a href="#">Terms & Agreements</a>
-                    <a href="#">Privacy Policy</a>
+                    <a href="#">Términos & Condiciones</a>
+                    <a href="#">Política de privacidad</a>
                 </div>
             </div>
         </footer>
@@ -308,8 +301,8 @@
 
         <!--=============== SWIPER JS ===============-->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-        <!--=============== SIMULATOR JS ===============-->
-        <script src="assets/js/bills-simulator.js"></script>
+        <!--=============== SIMULADOR JS ===============-->
+        <script src="assets/js/simulador-gastos.js"></script>
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
     </body>
